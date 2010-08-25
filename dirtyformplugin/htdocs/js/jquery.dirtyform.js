@@ -167,8 +167,8 @@ if (typeof jQuery == 'undefined') throw("jQuery could not be found.");
                 },
                 Cancel: function(){$(this).dialog('destroy').remove()}
               }
-            })).dialog("moveToTop").append(settings.message);
-            // div.append(settings.message);
+            })).dialog("moveToTop")
+            div.append(settings.message);
             return false
           }
         })
@@ -183,7 +183,8 @@ if (typeof jQuery == 'undefined') throw("jQuery could not be found.");
                   Proceed:function(){window.location = href},
                   Cancel:function(){$(this).dialog('destroy').remove(); return false}
                 }
-              }, settings.dialog)).dialog("moveToTop").append(settings.message);
+              }, settings.dialog)).dialog("moveToTop")
+            div.append(settings.message);
           }
         });
       }
